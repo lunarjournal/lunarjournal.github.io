@@ -1,0 +1,57 @@
+
+# The Lunar Journal.
+# Written by Dylan Müller, Copyright 2023.
+# Global Config
+
+name: Lunar Journal
+ref: journal.lunar.sh
+
+meta: Technical journal for engineers, researchers and hobbyists hosted by Lunar RF Labs.
+description: >-
+        Welcome to the `Lunar Journal`!<br><br>
+        `Journal` publications cover various areas in software
+        and electronics engineering.
+    
+bio: Technical journal for engineers, researchers and hobbyists hosted by <a class="header-link" href="https://labs.lunar.sh">Lunar RF Labs</a>
+github_raw: https://raw.githubusercontent.com/lunarjournal/lunarjournal.github.io/main
+
+avatar: /images/logo_space.jpg
+
+links:
+  email: 'root@lunar.sh'
+  github: 'lunarbin'
+  linktree: 'lunarjournal'
+
+url: 'https://journal.lunar.sh'
+baseurl: ""
+
+permalink: /:year/:title.html
+version: v1.2.0
+
+wallet:
+  btc: '34UiJn9VKiEG1etxeLWUt3xQHxwJBR8cL9'
+  ethereum: '0x700a7E64627f86478fA312F96983D06f39A38681'
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    block:
+      line_numbers: true
+
+sass:
+  style: :expanded
+
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jemoji
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

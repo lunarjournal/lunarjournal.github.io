@@ -1,0 +1,729 @@
+---
+---
+
+/*
+Theme: Lunar High Contrast.
+Author: Dylan Müller.
+
+Copyright © 2025 Lunar RF Labs. All rights reserved.
+
+This code is the property of Lunar RF Labs and may not be copied, 
+reproduced, or distributed without prior written permission. 
+For inquiries, contact root@lunar.sh.
+*/
+
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "variables";
+
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  font-variant-ligatures: none;
+}
+
+::-webkit-scrollbar {
+    background-color: #e5e5e5;
+    color: #a3a3a3;
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #a3a3a3;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #949494;
+}
+
+body {
+  background: $white;
+  font: 15px $inter;
+  line-height: 1.5;
+  color: $black;
+  scroll-behavior: smooth;
+  font-weight: 400;
+}
+
+small {
+  font-size: 15px;
+  color: $black;
+}
+
+sub, sup {
+line-height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $inter;
+  color: $black;
+  font-weight: bold;
+  /* scroll-margin-top: 125px; */
+
+  line-height: 1.5;
+  margin: 15px 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.5;
+    /* scroll-margin-top: 160px; */
+  }
+}
+
+h1 {
+  font-size: 17px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 17px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+h4 {
+  font-size: 17px;
+  color: $grey;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+  max-width: 25px;
+  margin: 35px auto;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+p:has(img):not(:has(img.emoji)) {
+   text-align: center;
+}
+
+a {
+  color: $black;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 12px 0;
+  padding-left: 35px;
+  list-style-type: decimal;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-right: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: square;
+}
+
+div ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div ol:first-of-type {
+  border: 1px solid;
+  font-size: 14.5px;
+}
+
+ol li::marker {
+  font-size: 14px;
+}
+
+ol ul,
+ul ol,
+ul ul,
+ol ol {
+  margin: 0;
+}
+
+ul ul,
+ol ul {
+  list-style-type: circle;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+article > header span {
+  display: block;
+  color: #000;
+  white-space: nowrap;
+  font-size: 15px;
+  margin-top: 1px;
+}
+
+article > header div {
+    font-size: 15px;
+}
+
+div a:hover:not(:has(img)):not(:has(code)) {
+    color: #fafafa;
+    background: #000;
+}
+
+li {
+    padding-left: 10px;
+}
+
+nav {
+  float: right;
+  margin-top: 30px;
+  font-family: $inter;
+  font-size: 13px;
+
+  @include mobile {
+    float: none;
+    margin-top: 20px;
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+  }
+
+  a {
+
+  @include mobile {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+    text-align: right;
+    font-weight: 500;
+    padding: 6px;
+    color: $white;
+    text-decoration-line: none;
+    background: #000;
+    font-size: 13px;
+    border: 1px solid #fafafa;
+  }
+}
+
+.aside-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0px;
+  border: 1px solid;
+  background: #fafafa;
+
+  @include mobile {
+    width: auto;
+    padding: 15px;
+    height: auto;
+    display: block;
+    background: #fafafa;
+  }
+}
+
+.caret {
+    display: inline-block;
+    width: 8px;
+    height: 3px;
+    vertical-align: bottom;
+    background-color: #fafafa;
+    margin-bottom: 2px;
+    animation: blink 0.5s steps(1, start) infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.atom {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.menu {
+  margin: 0 auto;
+  max-width: 730px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 730px;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-top: 0px;
+}
+
+.index {
+  max-width: 730px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 30px;
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+.avatar {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  flex: 0 0 auto;
+
+  @include mobile {
+     margin-left: auto;
+     margin-right: auto;
+  }
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+  /*margin-left: 0; */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  user-select: none;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  user-select: none;
+  mix-blend-mode: multiply;
+
+  @include mobile {
+     height: 100%;
+  }
+}
+
+.index dd {
+  margin-left: 0;
+  font-size: 15px;
+}
+
+.index dt {
+  font-size: 15px;
+  text-align: left;
+}
+
+.index dd:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.gmnoprint img {
+  max-width: none;
+}
+
+.emoji {
+    margin: 0;
+    display: initial;
+    line-height: 0;
+    vertical-align: text-bottom;
+}
+
+.date {
+  color: $black;
+}
+
+.author {
+  color: $black;
+}
+
+.muted {
+  color: $black;
+}
+
+.reference {
+  color: $black;
+  margin-top: 10px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.header-link{
+  color: #fafafa;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.no-decoration {
+  text-decoration-line: none;
+  color: #fafafa;
+  font-family: $inter;
+  user-select: none;
+}
+
+.youtube {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.ascii {
+  line-height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: 14px;
+  user-select: none;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.ascii pre {
+  white-space: pre-wrap;
+}
+
+.sticky {
+  background-color: #0a0b10;
+  /* position: sticky; */
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #0a0b10 45%, #c5c5c5);
+  color: white;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  
+  @include mobile {
+    background: linear-gradient(to right, #272727 80%, #272727);
+  }
+}
+
+.site-header {
+  padding-top: 15px;
+  padding-bottom: 20px;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.site-avatar {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-info {
+  float: left;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-name {
+  margin: 0;
+  color: $white;
+  font-family: $inter;
+  font-weight: bold;
+  font-size: 16px;
+  background: #1a1a1a;
+}
+
+.site-description {
+  margin: -5px 0 0 0;
+  color: #fafafa;
+  font-size: 15px;
+  width: 400px;
+  margin-top: 10px;
+
+  @include mobile {
+    margin: 3px 0;
+    width: auto;
+  }
+}
+
+.posts {
+  width: auto;
+}
+
+.posts > .post {
+  padding-top: 10px;
+}
+
+.posts > .post:first-child {
+  padding-top: 25px;
+  margin-bottom: 0px;
+}
+
+.post {
+  blockquote {
+    border: 1px solid $black;
+    border-left: 4px solid $dark;
+    padding: 5px 1rem;
+    color: black;
+    font-size: 15px;
+    margin: 15px 0;
+    background: #fafafa;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    font-size: 15px;
+  }
+}
+
+.revision {
+  margin-top: 10px;
+  color: $black;
+}
+
+table {
+  background: #e3e6e8;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+table tr {
+  font-size: 13.5px;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+}
+
+.Link--inTextBlock
+{
+   display: none;
+}
+
+table tr th {
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  padding: 2px 6px;
+  background: #e3e6e8;
+}
+
+.info table tr th
+{
+  background: none;
+  border-bottom: none;
+}
+
+table tr td {
+  text-align: left;
+  margin: 0;
+  padding: 3px 6px;
+  min-width: 150px;
+}
+
+.info table tr td {
+  min-width: 0;
+}
+
+table tr th :first-child,
+table tr td :first-child {
+  margin-top: 0;
+}
+
+table tr th :last-child,
+table tr td :last-child {
+  margin-bottom: 0;
+}
+
+.profile-badge
+{
+}
+
+.excerpt {
+  margin-top: 5px;
+}
+
+.brief {
+  border-left: 5px solid $dark;
+  padding: 0 1rem;
+}
+
+.info {
+  @include mobile {
+    display: none;
+  }
+}
+
+.info table {
+  background: #fafafa;
+  padding: 0;
+  border: 0;
+}
+
+.info td, .info th
+{
+  font-size: 15px;
+  padding: 3px 13px !important;
+}
+
+code table {
+    padding: 5px;
+    border: none;
+    background: none;
+    width: auto;
+}
+
+code table tr {
+    font-size: 12px;
+}
+
+.copy-code {
+    width: 21px;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    border: 1px solid #ff0000;
+
+    @include mobile {
+    display: none;
+  }
+}
+
+.rouge-gutter {
+    user-select: none;
+    background: #e3e6e8;
+    min-width: 27.41px;
+    text-align: right;
+    border-right: 1px solid #000;
+    padding-right: 10px;
+    min-width: 31.2px;
+    border-right-style: dotted;
+}
+
+.rouge-code {
+    display: inline-grid;
+    padding-left: 10px;
+}
+
+.rouge-code pre {
+    overflow-x: auto;
+}
+
+.summary {
+  @include mobile {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  line-height: 1.5;
+  display: inline-block;
+  font-size: 15px;
+  color: #000;
+  padding-right: 20px;
+}
+
+.contents {
+  border: 1px solid;
+  background: $white;
+}
+
+.footer-love {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: $inter;
+  color: #696969;
+}
+
+.MathJax
+{
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: .2em;
+  font-size: 1.1em !important;
+}
+
+.greyscale
+{
+  filter: grayscale(0.5);
+}
+
+@import "highlights";

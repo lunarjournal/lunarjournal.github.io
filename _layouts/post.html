@@ -1,0 +1,88 @@
+---
+layout: default
+---
+
+<!-- The Lunar Journal -->
+<!-- Written by Dylan Müller, Copyright 2023 -->
+
+<script>
+MathJax = {
+options: {
+    enableMenu: false,
+    menuOptions: {
+      settings: {
+        renderer: 'CHTML',
+        assistiveMml: false,
+        collapsible: false,
+        explorer: false
+      }
+    }
+  }
+};
+</script>
+<script src="/assets/js/polyfill.min.js"></script>
+<script src="/assets/js/clipboard.js" defer></script>
+<script id="MathJax-script" src="/assets/js/tex-mml-chtml.js"></script>
+
+<div id="main" role="main" class="main">
+  <article class="post">
+    <h1 class="title">{{ page.title }}</h1>
+  <div class="ascii">
+  <pre>
+   _                              _   _                            _     
+  (_)                            | | | |                          | |    
+   _  ___  _   _ _ __ _ __   __ _| | | |_   _ _ __   __ _ _ __ ___| |__  
+  | |/ _ \| | | | '__| '_ \ / _` | | | | | | | '_ \ / _` | '__/ __| '_ \ 
+  | | (_) | |_| | |  | | | | (_| | |_| | |_| | | | | (_| | |_ \__ \ | | |
+  | |\___/ \__,_|_|  |_| |_|\__,_|_(_)_|\__,_|_| |_|\__,_|_(_)|___/_| |_|
+ _/ |                                                                    
+|__/                   
+ </pre>
+  </div>
+    <div class="date">
+      Written on {{ page.date | date: "%B %e, %Y" }}
+    </div>
+    <div class="author">
+    </div>
+    <div class="entry">
+      {{ content }}
+    </div>
+  </article>
+  <hr>
+<div class="ascii">
+  <pre>
+        _..._
+      .'     '.      _
+     /    .-""-\   _/ \
+   .-|   /:.   |  |   |
+   |  \  |:.   /.-'-./
+   | .-'-;:__.'    =/
+   .'=  *=|NASA _.='
+  /   _.  |    ;
+ ;-.-'|    \   |
+/   | \    _\  _\
+\__/'._;.  ==' ==\
+         \    \   |
+         /    /   /
+         /-._/-._/
+  jgs    \   `\  \
+          `-._/._/
+  </pre>
+</div>
+  <p class="muted">
+    Questions, comments? Please send a plain-text email to <a href="mailto:{{ site.links.email }}">{{ site.links.email }}</a>
+    with a descriptive subject line and we will try get back to you!
+  </p>
+  <div class="reference">
+    <a href="{{ site.github_raw }}/{{ page.path }}">{{ page.path | split: '/' | last}}</a>
+  </div>
+  <div>
+    <a href="https://journal.lunar.sh/info.html">
+    <img class="greyscale" title="About Us" src="https://journal.lunar.sh/images/megafon.gif"/>
+    </a>
+  </div>
+  <div class="footer-love">
+    <strong>Developed</strong> with <i class="fas fa-heart"></i>
+    by <strong>Lunar RF Labs</strong>
+  </div>
+</div>

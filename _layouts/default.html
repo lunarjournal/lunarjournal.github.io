@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Lunar Journal, Copyright 2023-2025 -->
+<!-- Written by Dylan Müller -->
+<!-- https://journal.lunar.sh -->
+
+<!-- 
+Copyright © 2025 Lunar RF Labs. All rights reserved.
+
+This code is the property of Lunar RF Labs and may not be copied, 
+reproduced, or distributed without prior written permission. 
+For inquiries, contact root@lunar.sh.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Dylan Müller" />
+  <meta name="copyright" content="Dylan Müller" />
+
+<style>
+html {
+  visibility: hidden;
+  opacity: 0;
+}
+</style>
+<script>
+  document.fonts.ready.then(() => {
+    document.documentElement.style.visibility = "visible";
+    document.documentElement.style.opacity = "1";
+  });
+</script>
+
+  <script>
+  console.log("Lunar Journal (c) 2022-2024");
+  console.log("https://journal.lunar.sh");
+  console.log("email: root@lunar.sh");
+  console.log("atom: https://journal.lunar.sh/feed.xml")
+  console.log(`
++---------------------------------------+
+|   .-.         .-.         .-.         |
+|  /   \\       /   \\       /   \\        |
+| /     \\     /     \\     /     \\     / |
+|        \\   /       \\   /       \\   /  |
+|         "_"         "_"         "_"   |
+|                                       |
+|  _   _   _ _  _   _   ___   ___ _  _  |
+| | | | | | | \\| | /_\\ | _ \\ / __| || | |
+| | |_| |_| | .\` |/ _ \\|   /_\\__ \\ __ | |
+| |____\\___/|_|\\_/_/ \\_\\_|_(_)___/_||_| |
+|                                       |
+|                                       |
+| Lunar Labs                            |
+| https://lunar.sh                      |
+|                                       |
+| Research Laboratories                 |
+| Copyright (C) 2022-2024               |
+|                                       |
++---------------------------------------+
+  `)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJM07YZF2W"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JJM07YZF2W');
+  </script>
+  <title>Lunar RF Labs | {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+  {% include meta.html %}
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+  <meta name="image" property="og:image" content="/images/logo_space.jpg" />
+  <link rel="icon" href="/assets/lunar.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/lunar.ico" type="image/x-icon">
+  <link rel="alternate" type="application/rss+xml" 
+        title="RSS" 
+        href="https://journal.lunar.sh/feed.xml">
+</head>
+
+<body>
+  <div class="sticky">
+    <div class="menu">
+      <header class="site-header clearfix">
+        <div class="site-info">
+          <h1 class="site-name"><a class="no-decoration" href="{{ site.baseurl }}/">
+            {{ site.ref }}<span class="caret"></span></a></h1>
+          <p class="site-description">{{ site.bio }}</p>
+        </div>
+        <nav>
+          <a href="{{ site.baseurl }}/">Journal</a>
+          <a href="{{ site.baseurl }}/info.html">About</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+  {{ content }}
+</body>
+</html>
