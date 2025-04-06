@@ -29,7 +29,7 @@ specialises in the design of license free, open source `VHF` `RF` modules for us
 in wireless systems. 
 
 > We are Lunar RF Labs©, a radio-frequency research laboratory. <br>
-[lunar.sh](https://lunar.sh)
+[labs.lunar.sh](https://labs.lunar.sh)
 
 # Lab Status
 
