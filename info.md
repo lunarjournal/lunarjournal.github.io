@@ -43,7 +43,7 @@ Hot Air Station:          RS PRO 700W 124-4133
 Workbench Lamp:           Duratool 15W LED
 ```
 
-![Lab Status](https://lunarjournal.github.io/images/personal/lab_latest.JPG)
+![Lab Status](https://journal.lunar.sh/images/personal/lab_latest.JPG)
 
 # Cryptocurrency
 
