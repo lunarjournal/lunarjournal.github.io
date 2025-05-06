@@ -17,9 +17,6 @@
 
 `email`: [`root@lunar.sh`](mailto:root@lunar.sh)
 
-`Authors`:<br>
-- [`Dylan Müller`](https://linkedin.com/in/dylanmuller)
-
 # RSS Feed
 
 `RSS / Atom` : [`journal.lunar.sh/feed.xml`](https://journal.lunar.sh/feed.xml)
