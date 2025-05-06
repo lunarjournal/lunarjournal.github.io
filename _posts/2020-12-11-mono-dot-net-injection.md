@@ -196,7 +196,7 @@ be compiled with: `gcc -fpic -shared stager.cpp -o stager.so`.
 
 In order to inject the stager into the target process you may use any standard
 Linux shared library
-[injector](https://git.lunar.sh/lunarjournal/RobocraftClient/src/branch/master/injector).
+[injector](https://github.com/lunarbin/injector).
 
 With the capability of loading our own `mono` code into the target process, we
 need to ensure that our injected `C#` code stays persistent, i.e to prevent
@@ -302,7 +302,7 @@ dump the corresponding names to a text file.
 # Source Code
 
 All source code for this `journal` is hosted at
-[https://github.com/lunarjournal/robocraft](https://github.com/lunarjournal/robocraft)
+[https://github.com/lunarbin/robocraft](https://github.com/lunarbin/robocraft)
 
 # Signature
 
