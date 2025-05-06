@@ -73,7 +73,7 @@ Your support helps us publish new technical content for engineers and researcher
 | Lunar RF Labs                         |
 | https://lunar.sh                      |
 |                                       |
-| RF Research Laboratories              |
+| Research Laboratories                 |
 | Copyright (C) 2022-2024               |
 |                                       |
 +---------------------------------------+
